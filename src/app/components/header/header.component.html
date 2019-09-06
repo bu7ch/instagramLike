@@ -3,16 +3,16 @@
     <a href="">SuperInsta</a>
   </div>
   <ul>
-    <li>Home</li>
-    <li>Toutes les images</li>
-    <li>Suivis</li>
-    <li>Favorites</li>
-    <li>Mes Images </li>
+    <li><a routerLink="/">Home</a></li>
+    <li *ngIf="isLoggedIn"><a routerLink="/allposts"> Toutes les images</a></li>
+    <li *ngIf="isLoggedIn"><a routerLink="/following">Suivis</a></li>
+    <li *ngIf="isLoggedIn"><a routerLink="/favorites">Favorites</a></li>
+    <li *ngIf="isLoggedIn"><a routerLink="/MyPosts">Mes Images </a></li>
   </ul>
 
   <ul>
-    <li>Connexion</li>
-    <li>S'enregister</li>
+    <li routerLinkActive="active"><a routerLink="/login">Connexion</a></li>
+    <li routerLinkActive="active"><a routerLink="/signup">S'enregister</a></li>
     <!-- deconnexion  -->
   </ul>
 </nav>
